@@ -3,6 +3,9 @@ from django.core.validators import MaxValueValidator, MinValueValidator
 
 
 class Band(models.Model):
+    def __str__(self) -> str:
+        return f'{self.name}'
+
     class Gender(models.TextChoices):
         HIP_HOP = 'HH'
         SYNTH_POP = 'SP'
